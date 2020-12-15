@@ -1,15 +1,19 @@
-var colorsIdsList = ["green","yellow","red","black"]
+var colors = ["green","yellow","red","black"]
 
 for(i=0;  i < 3; i++){
-    task(i)
+    colorAssign(i)
 }
 
-function task(i){
+function colorAssign(i){
     setTimeout(function(){
-        document.getElementById(colorsIdsList[i]).style.backgroundColor = colorsIdsList[i];
+        document.getElementById(colors[i]).style.backgroundColor = colors[i];
      }, 2000 * (i + 1));    
+     colorClear(i)
+   
+}
+function colorClear(i){
     setTimeout(function(){
-        document.getElementById(colorsIdsList[i]).style.backgroundColor = colorsIdsList[3];
+        document.getElementById(colors[i]).style.backgroundColor = colors[3];
     }, 3000 * (i + 1));
 }
 
