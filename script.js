@@ -1,20 +1,18 @@
 var colors = ["green","yellow","red","black"]
 
-for(i=0;  i < 3; i++){
+for(i = 0;  i < 3; i++){
     colorAssign(i)
 }
 
 function colorAssign(i){
-    setTimeout(function(){
+    setTimeout(() => {
+        colorClear(i)
         document.getElementById(colors[i]).style.backgroundColor = colors[i];
      }, 2000 * (i + 1));    
-     colorClear(i)
-   
 }
 function colorClear(i){
-    setTimeout(function(){
-        document.getElementById(colors[i]).style.backgroundColor = colors[3];
-    }, 3000 * (i + 1));
+    i = i === 0 ? 0 : i - 1;
+    document.getElementById(colors[i]).style.backgroundColor = colors[3];
 }
 
 
