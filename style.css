@@ -1,0 +1,17 @@
+#Traffic_Light{
+    height: 400px;
+    width: 200px;
+    background-color: #333333;
+    margin: 30px;
+    padding: 10px;
+    float: left;
+    border-radius: 40px;
+}
+.bulb{
+    height: 100px;
+    width: 100px;
+    background-color: #000000;
+    border-radius: 50%;
+    margin: 25px auto;
+    
+}
